@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+body{
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 230px;
+  background-image: url('./bg-desktop-light.jpg');
+  display: fixed;
+  
+}
+#dark .header{
+  background-image: url('./bg-desktop-dark.jpg');
+}
+main{
+  max-width: 40%;
+  margin: -9% auto;
+}
+h1{
+  position: absolute;
+  left: 40%;
+  font-stretch: extra-expanded;
+  color:white;
+  font-size: 38px;
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ form{
+border: 1px solid #30313D;
+border-radius: 3px;
+padding: 15px 5px;
+display: flex;
+background-color: white;
+margin-bottom: 20px;
+
+ }
+#dark form{
+  background-color: #30313D;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#dark .circle{
+  color:darkgrey
+}
+
+form input[type="text"]{
+  border:none;
+  border-radius: 3px;
+  padding:0px 8px;
+  display: block ;
+  width:100%;
+  outline: none;
+  
+}
+
+#dark form input{
+  background-color: #30313D;
+  color: dimgrey;
+  font-weight: 500;
+}
+
+#dark {
+
+background-color:black;
+  
+}
+
+body{
+  background-color: white;
+}
+.circle{
+ font-size: 25px;
+}
+
+
+.todo{
+  background-color: white;
+  border-radius: 3px 3px 0px 0px;
+  padding: 17px 0px ;
+  transition: background-color 0.3s ease;
+  box-shadow: 4px 4px 10px rgb(0.5,0,0,0.5);
+  margin-top: 1px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* text-align: start; */
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.todo:hover{
+  background-color: gainsboro;
+}
+ #dark .todo:hover{
+  background-color:grey;
+  
+}
+#dark .todo{
+  background-color: #30313D;
+  color:darkgray;
+  transition: background-color 0.3s ease;
+  
+}
+#dark .completed{
+  color: dimgrey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.icon{
+  display: flex;
+  margin-right: 8px;
+  font-size: 25px;
+   
+}
+
+.checked{
+color:rgba(76, 88, 247, 0.753);
+}
+
+.completed{
+
+  text-decoration: line-through;
+  color:darkgray;
+}
+
+.deleteIcon{
+  float:right;
+  margin-left: auto;
+  display:flex;
+  align-items: right;
+  font-size: 25px;
+  padding:7px 5px 0px 0px;
+}
+
+.footer{
+  background-color: white;
+  border-radius: 3px 3px 0px 0px;
+  padding: 18px 5px ;
+  box-shadow: 4px 4px 10px rgb(0.5,0,0,0.5);
+  margin-top: 1px;
+  display: flex;
+  text-align: start;
+  cursor: pointer;
+}
+#dark .footer{
+  background-color: #30313D; 
+}
+
+.btn{
+  text-align: center;
+  margin: auto;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  font-weight: 500;
+  color: darkgrey;
+  cursor: pointer;
+}
+
+.clicked {
+  color:cornflowerblue; /* Set the color you want when the span is clicked */
+}
+
+#dark .first-footer{
+  color:darkgray;
+  font-weight: 400;
+}
+
+#dark .btn1{
+  color:darkgray;
+  font-weight: 400;
+}
+.switch{
+  margin:  10px auto;
+  margin-right: 30% ;
+  font-size: 9px;
+  float:right;
+}
+
+@media screen and (max-width:750px){
+
+  body{
+    width:auto;
   }
-  to {
-    transform: rotate(360deg);
+  h1{
+    position: absolute;
+    left: 18%;
+    font-stretch: extra-expanded;
+    color:white;
+    font-size: 32px;
+    margin-top: 20px;
   }
+  
+  .header{
+  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 200px;
+    background-image: url('./bg-desktop-light.jpg');
+    display: flex;
+    
+  }
+  form{
+    border: 1px solid #30313D;
+    border-radius: 3px;
+    padding: 15px 5px;
+    display: flex;
+    background-color: white;
+    margin-bottom: 20px;
+    
+     }
+     form input[type="text"]{
+      border:none;
+      border-radius: 3px;
+      padding:0px 8px;
+      display: block ;
+      width:100%;
+      outline: none;
+      
+    }
+
+    .todo{
+      background-color: white;
+      border-radius: 3px 3px 0px 0px;
+      padding: 18px 5px ;
+      transition: background-color 0.3s ease;
+      box-shadow: 4px 4px 10px rgb(0.5,0,0,0.5);
+      margin-top: 1px;
+      display: flex;
+      /* text-align: start; */
+      width: 100%;
+    }
+    
+    .todo:hover{
+      background-color: gainsboro;
+    }
+    .switch{
+      margin:  10px auto;
+      margin-right: 30% ;
+      font-size: 4px;
+      float:right;
+    }
+    main{
+      max-width: 80%;
+      margin: -15% auto;
+    }
 }
